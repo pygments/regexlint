@@ -13,8 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import sre_constants
-import sre_parse
+import re._constants as sre_constants
+import re._parser as sre_parse
 from unittest import TestCase
 
 import pytest
@@ -203,7 +203,7 @@ SRE_CATS = {
 
 
 def expand_sre_in(x):
-    for (typ, value) in x:
+    for typ, value in x:
         if typ in (sre_constants.LITERAL, sre_constants.NOT_LITERAL):
             yield value
         elif typ == sre_constants.RANGE:
