@@ -13,10 +13,12 @@
 # limitations under the License.
 
 import re
+
 try:
     import re._parser as sre_parse
 except ImportError:
     import sre_parse
+
 import sys
 import weakref
 
